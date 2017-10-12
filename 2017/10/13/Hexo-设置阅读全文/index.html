@@ -90,16 +90,16 @@
 
 
 
-<meta name="description" content="Hexo 的 Next 主题默认是首页显示你每篇文章的全文内容，那么要如何设置只显示部分呢？ 目标在网站首页只显示每篇文章的部分内容，不要全部内容都展示出来。 解决要解决这个问题有两个方法：一是修改 _config.yml 文件设置，二是直接在你的 md 中加一句代码即可。 第一种方法用文本编辑器打开 themes/next 目录下的 _config.yml 文件，找到这段代码： 12345# A">
+<meta name="description" content="Hexo 的 Next 主题默认是首页显示你每篇文章的全文内容，那么要如何设置只显示部分呢？ 目标在网站首页只显示每篇文章的部分内容，不要全部内容都展示出来。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo-设置阅读全文">
 <meta property="og:url" content="https://flushmeteor.github.io/2017/10/13/Hexo-设置阅读全文/index.html">
 <meta property="og:site_name" content="flushmeteor">
-<meta property="og:description" content="Hexo 的 Next 主题默认是首页显示你每篇文章的全文内容，那么要如何设置只显示部分呢？ 目标在网站首页只显示每篇文章的部分内容，不要全部内容都展示出来。 解决要解决这个问题有两个方法：一是修改 _config.yml 文件设置，二是直接在你的 md 中加一句代码即可。 第一种方法用文本编辑器打开 themes/next 目录下的 _config.yml 文件，找到这段代码： 12345# A">
-<meta property="og:updated_time" content="2017-10-12T16:13:19.000Z">
+<meta property="og:description" content="Hexo 的 Next 主题默认是首页显示你每篇文章的全文内容，那么要如何设置只显示部分呢？ 目标在网站首页只显示每篇文章的部分内容，不要全部内容都展示出来。">
+<meta property="og:updated_time" content="2017-10-12T16:15:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo-设置阅读全文">
-<meta name="twitter:description" content="Hexo 的 Next 主题默认是首页显示你每篇文章的全文内容，那么要如何设置只显示部分呢？ 目标在网站首页只显示每篇文章的部分内容，不要全部内容都展示出来。 解决要解决这个问题有两个方法：一是修改 _config.yml 文件设置，二是直接在你的 md 中加一句代码即可。 第一种方法用文本编辑器打开 themes/next 目录下的 _config.yml 文件，找到这段代码： 12345# A">
+<meta name="twitter:description" content="Hexo 的 Next 主题默认是首页显示你每篇文章的全文内容，那么要如何设置只显示部分呢？ 目标在网站首页只显示每篇文章的部分内容，不要全部内容都展示出来。">
 
 
 
@@ -319,6 +319,7 @@
       
         <p>Hexo 的 Next 主题默认是首页显示你每篇文章的全文内容，那么要如何设置只显示部分呢？</p>
 <h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>在网站首页只显示每篇文章的部分内容，不要全部内容都展示出来。</p>
+<a id="more"></a>
 <h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>要解决这个问题有两个方法：一是修改 _config.yml 文件设置，二是直接在你的 md 中加一句代码即可。</p>
 <h3 id="第一种方法"><a href="#第一种方法" class="headerlink" title="第一种方法"></a>第一种方法</h3><p>用文本编辑器打开 themes/next 目录下的 _config.yml 文件，找到这段代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Automatically Excerpt. Not recommend.</div><div class="line"># Please use &lt;!-- more --&gt; in the post to control excerpt accurately.</div><div class="line">auto_excerpt:</div><div class="line">  enable: false</div><div class="line">  length: 150</div></pre></td></tr></table></figure>
