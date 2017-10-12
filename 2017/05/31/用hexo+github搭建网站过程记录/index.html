@@ -97,7 +97,7 @@
 <meta property="og:url" content="https://flushmeteor.github.io/2017/05/31/用hexo+github搭建网站过程记录/index.html">
 <meta property="og:site_name" content="flushmeteor">
 <meta property="og:description" content="参考博客.Github给每个用户提供了免费域名来搭建网站，正好拿来玩一玩。">
-<meta property="og:updated_time" content="2017-10-12T15:42:48.000Z">
+<meta property="og:updated_time" content="2017-10-12T15:55:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用Hexo+Github搭建网站过程记录">
 <meta name="twitter:description" content="参考博客.Github给每个用户提供了免费域名来搭建网站，正好拿来玩一玩。">
@@ -358,10 +358,12 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
 <p>在浏览器中访问<code>http://localhost:4000/</code>就可以看到发布的网站。</p>
 <h3 id="发布到github"><a href="#发布到github" class="headerlink" title="发布到github"></a>发布到github</h3><p>在终端执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div><div class="line">$ npm install hexo-deployer-git --save  （安装一次即可，之后不用再次安装）</div><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div><div class="line">$ npm install hexo-deployer-git --save  （安装一次即可，之后不用再次安装）</div><div class="line">$ sudo hexo deploy</div></pre></td></tr></table></figure>
 <h2 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h2><p>默认的主题实在是丑，幸好hexo可以自己修改主题。网上有很多主题，最终选择了<code>next</code>。<br><code>next</code>的中文注释清晰明了，不再记录，附<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">链接</a></p>
 <h2 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h2><p>第一次按照上面的步骤执行的时候是没有问题的。过了一段时间，写了一篇新文章，发现hexo deploy不管用了，一直报错说没法连接到远程仓库。后来查到说是：git版本太高，我也是醉了。。<br>想着重装git吧，mac竟然不让删除/usr/bin下面的文件！那干脆将生成的文件手动push到github上。在 .deploy_git 目录下执行下面的命令（第一条命令是担心没有正确连接github，创建的远程分支，不用每次都执行）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># git remote add origin git@github.com:flushmeteor/flushmeteor.github.io.git</div><div class="line"># git push origin master</div></pre></td></tr></table></figure>
+<p>注意：如果要一直使用这种方法，每次需要先执行下面的命令进行生成和部署操作，这样才能保证 .deploy_git 目录下是最新的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div><div class="line">$ sudo hexo deploy</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -484,7 +486,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
