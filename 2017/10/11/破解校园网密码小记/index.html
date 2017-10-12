@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="动机闲来无聊，想找点东西玩玩。正好校园网的帐号总是不够用，往届的帐号不注销，所以刷一刷帐号，顺便熟悉一下网络相关的编程。 找资料刷帐号和刷课的逻辑是类似的，就在网上找刷课的博客，选了一篇作为参考。 动手看网页源码要想刷帐号，最重要的是先找到与网站进行交互的方法。包括url、method、表单信息。幸好之前有html的基础，不然看起来也是要爆炸。 从网页源码中定位找到了要传输的表单信息，用户名 &amp;l">
+<meta name="description" content="动机闲来无聊，想找点东西玩玩。正好校园网的帐号总是不够用，往届的帐号不注销，所以刷一刷帐号，顺便熟悉一下网络相关的编程。">
 <meta name="keywords" content="破解,校园网">
 <meta property="og:type" content="article">
 <meta property="og:title" content="破解校园网密码小记">
 <meta property="og:url" content="https://flushmeteor.github.io/2017/10/11/破解校园网密码小记/index.html">
 <meta property="og:site_name" content="flushmeteor">
-<meta property="og:description" content="动机闲来无聊，想找点东西玩玩。正好校园网的帐号总是不够用，往届的帐号不注销，所以刷一刷帐号，顺便熟悉一下网络相关的编程。 找资料刷帐号和刷课的逻辑是类似的，就在网上找刷课的博客，选了一篇作为参考。 动手看网页源码要想刷帐号，最重要的是先找到与网站进行交互的方法。包括url、method、表单信息。幸好之前有html的基础，不然看起来也是要爆炸。 从网页源码中定位找到了要传输的表单信息，用户名 &amp;l">
-<meta property="og:updated_time" content="2017-10-11T16:07:01.000Z">
+<meta property="og:description" content="动机闲来无聊，想找点东西玩玩。正好校园网的帐号总是不够用，往届的帐号不注销，所以刷一刷帐号，顺便熟悉一下网络相关的编程。">
+<meta property="og:updated_time" content="2017-10-12T15:42:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="破解校园网密码小记">
-<meta name="twitter:description" content="动机闲来无聊，想找点东西玩玩。正好校园网的帐号总是不够用，往届的帐号不注销，所以刷一刷帐号，顺便熟悉一下网络相关的编程。 找资料刷帐号和刷课的逻辑是类似的，就在网上找刷课的博客，选了一篇作为参考。 动手看网页源码要想刷帐号，最重要的是先找到与网站进行交互的方法。包括url、method、表单信息。幸好之前有html的基础，不然看起来也是要爆炸。 从网页源码中定位找到了要传输的表单信息，用户名 &amp;l">
+<meta name="twitter:description" content="动机闲来无聊，想找点东西玩玩。正好校园网的帐号总是不够用，往届的帐号不注销，所以刷一刷帐号，顺便熟悉一下网络相关的编程。">
 
 
 
@@ -319,6 +319,7 @@
 
       
         <h2 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h2><p>闲来无聊，想找点东西玩玩。正好校园网的帐号总是不够用，往届的帐号不注销，所以刷一刷帐号，顺便熟悉一下网络相关的编程。</p>
+<a id="more"></a>
 <h2 id="找资料"><a href="#找资料" class="headerlink" title="找资料"></a>找资料</h2><p>刷帐号和刷课的逻辑是类似的，就在网上找刷课的博客，选了<a href="http://blog.csdn.net/u012411003/article/details/44259323" target="_blank" rel="external">一篇</a>作为参考。</p>
 <h2 id="动手"><a href="#动手" class="headerlink" title="动手"></a>动手</h2><h3 id="看网页源码"><a href="#看网页源码" class="headerlink" title="看网页源码"></a>看网页源码</h3><p>要想刷帐号，最重要的是先找到与网站进行交互的方法。包括url、method、表单信息。幸好之前有html的基础，不然看起来也是要爆炸。</p>
 <p>从网页源码中定位找到了要传输的表单信息，用户名 <em><code>&lt;input class=&quot;input&quot; name=&quot;username&quot; id=&quot;username&quot; style=&quot;border: none; font-size: 16px; display: none;&quot; tabindex=&quot;0&quot; type=&quot;text&quot; tipinfo=&quot;Username&quot; value=&quot;&quot;&gt;</code></em>，密码 <em><code>&lt;input name=&quot;pwd&quot; class=&quot;input&quot; id=&quot;pwd&quot; type=&quot;password&quot; style=&quot;border: none; display: none;&quot; tabindex=&quot;0&quot; tipinfo=&quot;Password&quot; value=&quot;&quot;&gt;</code></em>，提交按钮 <em><code>&lt;a id=&quot;loginLink&quot; tabindex=&quot;-1&quot; onclick=&quot;this.className=&#39;loginButtonHKClicked_1&#39;;doauthen();&quot;&gt; &lt;div id=&quot;loginLink_div&quot;&gt;&lt;/div&gt; &lt;/a&gt;</code></em>。</p>
