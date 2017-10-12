@@ -97,7 +97,7 @@
 <meta property="og:url" content="https://flushmeteor.github.io/2017/05/31/用hexo+github搭建网站过程记录/index.html">
 <meta property="og:site_name" content="flushmeteor">
 <meta property="og:description" content="参考博客.Github给每个用户提供了免费域名来搭建网站，正好拿来玩一玩。 nodeHexo是node.js写的，所以先要安装node。 Github免费域名怎么玩创建一个仓库，命名为username.github.io，然后把静态网页放在仓库中，访问username.github.io就可以解析为网站了。  生成公钥在终端（Terminal）输入： 1ssh-keygen -t rsa -C &amp;">
-<meta property="og:updated_time" content="2017-10-12T10:11:08.000Z">
+<meta property="og:updated_time" content="2017-10-12T11:08:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用Hexo+Github搭建网站过程记录">
 <meta name="twitter:description" content="参考博客.Github给每个用户提供了免费域名来搭建网站，正好拿来玩一玩。 nodeHexo是node.js写的，所以先要安装node。 Github免费域名怎么玩创建一个仓库，命名为username.github.io，然后把静态网页放在仓库中，访问username.github.io就可以解析为网站了。  生成公钥在终端（Terminal）输入： 1ssh-keygen -t rsa -C &amp;">
@@ -340,19 +340,13 @@
 <p>安装好hexo以后，在终端输入：<code>$ hexo</code> 如果出现命令提示，说明安装成功</p>
 <h3 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// 建立一个博客文件夹，并初始化博客，&lt;folder&gt;为文件夹的名称，可以随便起名字</div><div class="line">$ hexo init &lt;folder&gt;</div><div class="line">// 进入博客文件夹，&lt;folder&gt;为文件夹的名称</div><div class="line">$ cd &lt;folder&gt;</div><div class="line">// node.js的命令，根据博客既定的dependencies配置安装所有的依赖包</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
 <h3 id="配置博客"><a href="#配置博客" class="headerlink" title="配置博客"></a>配置博客</h3><p>基于上一步，我们对博客修改相应的配置，我们用到_config.yml文件。里面配置项很多，主要用到的是以下几项。</p>
-<ol>
-<li>修改网站相关信息</li>
-</ol>
+<p>1 修改网站相关信息</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">title: flushmeteor</div><div class="line">subtitle: the stack of it nerds</div><div class="line">description: xxx</div><div class="line">author: flushmeteor</div><div class="line">language: zh-CN</div><div class="line">timezone: Asia/Shanghai</div></pre></td></tr></table></figure>
 <p><strong>注意</strong>：每一项的填写，其<code>:</code>后面都要保留一个空格，下同</p>
-<ol>
-<li>配置统一资源定位符（个人域名） </li>
-</ol>
+<p>2 配置统一资源定位符（个人域名） </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://flushmeteor.github.io/</div></pre></td></tr></table></figure>
 <p>对于root（根目录）、permalink（永久链接）、permalink_defaults（默认永久链接）等其他信息保持默认。</p>
-<ol>
-<li>配置部署</li>
-</ol>
+<p>3 配置部署</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: git@github.com:flushmeteor/flushmeteor.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
 <p>其中repo项是之前Github上创建好的仓库的地址，可以在github上该仓库中<code>clone or download</code>处复制这个地址</p>
 <h3 id="发表一篇文章"><a href="#发表一篇文章" class="headerlink" title="发表一篇文章"></a>发表一篇文章</h3><p>在终端输入：</p>
@@ -363,8 +357,10 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
 <p>在浏览器中访问<code>http://localhost:4000/</code>就可以看到发布的网站。</p>
 <h3 id="发布到github"><a href="#发布到github" class="headerlink" title="发布到github"></a>发布到github</h3><p>在终端执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div><div class="line">$ npm install hexo-deployer-git --save</div><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div><div class="line">$ npm install hexo-deployer-git --save  （安装一次即可，之后不用再次安装）</div><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
 <h2 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h2><p>默认的主题实在是丑，幸好hexo可以自己修改主题。网上有很多主题，最终选择了<code>next</code>。<br><code>next</code>的中文注释清晰明了，不再记录，附<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">链接</a></p>
+<h2 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h2><p>第一次按照上面的步骤执行的时候是没有问题的。过了一段时间，写了一篇新文章，发现hexo deploy不管用了，一直报错说没法连接到远程仓库。后来查到说是：git版本太高，我也是醉了。。<br>想着重装git吧，mac竟然不让删除/usr/bin下面的文件！那干脆将生成的文件手动push到github上。在 .deploy_git 目录下执行下面的命令（第一条命令是担心没有正确连接github，创建的远程分支，不用每次都执行）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># git remote add origin git@github.com:flushmeteor/flushmeteor.github.io.git</div><div class="line"># git push origin master</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -535,7 +531,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#node"><span class="nav-number">1.</span> <span class="nav-text">node</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Github"><span class="nav-number">2.</span> <span class="nav-text">Github</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#免费域名怎么玩"><span class="nav-number">2.1.</span> <span class="nav-text">免费域名怎么玩</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成公钥"><span class="nav-number">2.2.</span> <span class="nav-text">生成公钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加公钥到github"><span class="nav-number">2.3.</span> <span class="nav-text">添加公钥到github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加ssh配置文件"><span class="nav-number">2.4.</span> <span class="nav-text">添加ssh配置文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装git"><span class="nav-number">3.</span> <span class="nav-text">安装git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装配置hexo"><span class="nav-number">4.</span> <span class="nav-text">安装配置hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载安装Hexo"><span class="nav-number">4.1.</span> <span class="nav-text">下载安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化博客"><span class="nav-number">4.2.</span> <span class="nav-text">初始化博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置博客"><span class="nav-number">4.3.</span> <span class="nav-text">配置博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发表一篇文章"><span class="nav-number">4.4.</span> <span class="nav-text">发表一篇文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在本地发布"><span class="nav-number">4.5.</span> <span class="nav-text">在本地发布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发布到github"><span class="nav-number">4.6.</span> <span class="nav-text">发布到github</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更换主题"><span class="nav-number">5.</span> <span class="nav-text">更换主题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#node"><span class="nav-number">1.</span> <span class="nav-text">node</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Github"><span class="nav-number">2.</span> <span class="nav-text">Github</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#免费域名怎么玩"><span class="nav-number">2.1.</span> <span class="nav-text">免费域名怎么玩</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成公钥"><span class="nav-number">2.2.</span> <span class="nav-text">生成公钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加公钥到github"><span class="nav-number">2.3.</span> <span class="nav-text">添加公钥到github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加ssh配置文件"><span class="nav-number">2.4.</span> <span class="nav-text">添加ssh配置文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装git"><span class="nav-number">3.</span> <span class="nav-text">安装git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装配置hexo"><span class="nav-number">4.</span> <span class="nav-text">安装配置hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载安装Hexo"><span class="nav-number">4.1.</span> <span class="nav-text">下载安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化博客"><span class="nav-number">4.2.</span> <span class="nav-text">初始化博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置博客"><span class="nav-number">4.3.</span> <span class="nav-text">配置博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发表一篇文章"><span class="nav-number">4.4.</span> <span class="nav-text">发表一篇文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在本地发布"><span class="nav-number">4.5.</span> <span class="nav-text">在本地发布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发布到github"><span class="nav-number">4.6.</span> <span class="nav-text">发布到github</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更换主题"><span class="nav-number">5.</span> <span class="nav-text">更换主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#遇到的坑"><span class="nav-number">6.</span> <span class="nav-text">遇到的坑</span></a></li></ol></div>
             
 
           </div>
