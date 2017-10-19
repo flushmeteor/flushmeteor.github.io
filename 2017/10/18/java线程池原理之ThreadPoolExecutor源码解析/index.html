@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="java,线程池,ThreadPoolExecutor," />
 
 
 
@@ -91,12 +91,13 @@
 
 
 <meta name="description" content="起因一直听说java的线程池能减少线程创建的开销，是多线程编程中的一把利器。但是，具体线程池是个啥东东，为啥这么牛逼，又是怎么做到的减少开销，一直都是处于知其然不知其所以然的状态。最近正好面试复习这些知识，干脆打算彻底搞懂它。">
+<meta name="keywords" content="java,线程池,ThreadPoolExecutor">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java线程池原理之ThreadPoolExecutor源码解析">
 <meta property="og:url" content="https://flushmeteor.github.io/2017/10/18/java线程池原理之ThreadPoolExecutor源码解析/index.html">
 <meta property="og:site_name" content="flushmeteor">
 <meta property="og:description" content="起因一直听说java的线程池能减少线程创建的开销，是多线程编程中的一把利器。但是，具体线程池是个啥东东，为啥这么牛逼，又是怎么做到的减少开销，一直都是处于知其然不知其所以然的状态。最近正好面试复习这些知识，干脆打算彻底搞懂它。">
-<meta property="og:updated_time" content="2017-10-19T02:32:40.000Z">
+<meta property="og:updated_time" content="2017-10-19T02:51:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java线程池原理之ThreadPoolExecutor源码解析">
 <meta name="twitter:description" content="起因一直听说java的线程池能减少线程创建的开销，是多线程编程中的一把利器。但是，具体线程池是个啥东东，为啥这么牛逼，又是怎么做到的减少开销，一直都是处于知其然不知其所以然的状态。最近正好面试复习这些知识，干脆打算彻底搞懂它。">
@@ -317,7 +318,8 @@
       
 
       
-        <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>一直听说java的线程池能减少线程创建的开销，是多线程编程中的一把利器。但是，具体线程池是个啥东东，为啥这么牛逼，又是怎么做到的减少开销，一直都是处于知其然不知其所以然的状态。最近正好面试复习这些知识，干脆打算彻底搞懂它。<br><a id="more"></a></p>
+        <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>一直听说java的线程池能减少线程创建的开销，是多线程编程中的一把利器。但是，具体线程池是个啥东东，为啥这么牛逼，又是怎么做到的减少开销，一直都是处于知其然不知其所以然的状态。最近正好面试复习这些知识，干脆打算彻底搞懂它。</p>
+<a id="more"></a>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>哈哈，上来先总结一句，装装逼。ThreadPoolExecutor是java线程池的核心类，对其进行分析还是挺长的，先总结一句，能有个整体的把握。一句话来概述，线程池就是用一堆包装住Thread的Wroker类的集合，在里面有条件的进行着死循环，从而可以不断接受任务来进行。</p>
 <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>先抛出几个问题，带着问题进行分析会更有目的性。</p>
 <ul>
@@ -472,6 +474,16 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+            <a href="/tags/线程池/" rel="tag"># 线程池</a>
+          
+            <a href="/tags/ThreadPoolExecutor/" rel="tag"># ThreadPoolExecutor</a>
+          
+        </div>
+      
 
       
         
@@ -573,10 +585,10 @@
             
             
             <div class="site-state-item site-state-tags">
-              
-                <span class="site-state-item-count">2</span>
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
-              
+              </a>
             </div>
           
 
